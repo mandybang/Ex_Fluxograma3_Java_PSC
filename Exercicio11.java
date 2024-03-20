@@ -61,7 +61,7 @@ public class Exercicio11 {
 
              case 4:
              System.out.println("Obrigado por utilizar nosso caixa eletrônico. Até logo!");
-             input.close(); // Fechar o Scanner antes de sair do programa
+             input.close(); // Fechar o Scanner antes de sair do programa 
              return; // Terminar o programa
          default:
              System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
