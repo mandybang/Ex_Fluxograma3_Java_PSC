@@ -12,6 +12,7 @@ public class Exercicio11 {
         Scanner input = new Scanner(System.in);
         int saldo = 100000;
         int saque, deposito;
+        String extrato = ""; // Inicializando o extrato como uma string vazia
             
         
         while (true) {
@@ -20,7 +21,8 @@ public class Exercicio11 {
             System.out.println("1. Exibir saldo");
             System.out.println("2. Realizar depósito");
             System.out.println("3. Realizar saque");
-            System.out.println("4. Sair");
+            System.out.println("4. Mostrar extrato");
+            System.out.println("5. Sair");
             System.out.print("Digite o número da operação desejada: ");
             int escolha = input.nextInt();
             input.nextLine(); // Limpar o buffer do teclado
@@ -46,6 +48,7 @@ public class Exercicio11 {
              deposito = input.nextInt();
              saldo += deposito; // saldo += deposito é como se fosse saldo = saldo + deposito.
              System.out.println("Depósito realizado com sucesso!");
+             extrato += "Depósito de R$" + deposito + "\n"; // Adicionando registro de depósito ao extrato
              break;
 
          case 3:
@@ -54,15 +57,22 @@ public class Exercicio11 {
              if (saldo >= saque) {
                  saldo -= saque;
                  System.out.println("Retire seu dinheiro.");
+                 extrato += "Saque de R$" + saque + "\n"; // Adicionando registro de saque ao extrato
              } else {
                  System.out.println("Saldo insuficiente.");
              }
              break;
 
              case 4:
+             System.out.println("Extrato:");
+             System.out.println(extrato);
+             break;
+
+             case 5:
              System.out.println("Obrigado por utilizar nosso caixa eletrônico. Até logo!");
              input.close(); // Fechar o Scanner antes de sair do programa 
              return; // Terminar o programa
+             
          default:
              System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
              return;
@@ -70,3 +80,54 @@ public class Exercicio11 {
  }
 } 
 }
+
+
+
+/** System.out.println("4. Exibir extrato");
+System.out.println("5. Sair");
+System.out.print("Digite o número da operação desejada: ");
+int escolha = input.nextInt();
+input.nextLine(); // Limpar o buffer do teclado
+
+switch (escolha) {
+    case 1:
+        System.out.println("Saldo atual: R$" + saldo);
+        break;
+
+    case 2:
+        System.out.print("Digite o valor a ser depositado: R$");
+        deposito = input.nextInt();
+        saldo += deposito;
+        System.out.println("Depósito realizado com sucesso!");
+        extrato += "Depósito de R$" + deposito + "\n"; // Adicionando registro de depósito ao extrato
+        break;
+
+    case 3:
+        System.out.print("Digite o valor a ser sacado: R$");
+        saque = input.nextInt();
+        if (saldo >= saque) {
+            saldo -= saque;
+            System.out.println("Retire seu dinheiro.");
+            extrato += "Saque de R$" + saque + "\n"; // Adicionando registro de saque ao extrato
+        } else {
+            System.out.println("Saldo insuficiente.");
+        }
+        break;
+
+    case 4:
+        System.out.println("Extrato:");
+        System.out.println(extrato);
+        break;
+
+    case 5:
+        System.out.println("Obrigado por utilizar nosso caixa eletrônico. Até logo!");
+        input.close(); // Fechar o Scanner antes de sair do programa
+        return; // Terminar o programa
+
+    default:
+        System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
+        break;
+}
+}
+}
+} */
