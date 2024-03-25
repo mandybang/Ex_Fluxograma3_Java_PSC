@@ -46,9 +46,6 @@ else if (valorProduto >= 50) {
     System.out.println("Você deverá vender por: R$" + valorVenda);
     
 }
-
-
-
         input.close();
     }
     
