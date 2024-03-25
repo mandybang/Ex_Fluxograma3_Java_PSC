@@ -30,13 +30,7 @@ if ( valorProduto < 10) {
     
     
 }
-else if (valorProduto <= 10 || valorProduto < 30) {
-    porLucro =50;
-    lucro = valorProduto * (porLucro / 100);
-    valorVenda = valorProduto + lucro;
-    System.out.println("A porcentagem de lucro é de: " + porLucro);
-    System.out.println("Você deverá vender por: R$" + valorVenda);
-}
+
 else if (valorProduto <= 30 || valorProduto < 50) {
     porLucro = 40;
     lucro = valorProduto * (porLucro / 100);

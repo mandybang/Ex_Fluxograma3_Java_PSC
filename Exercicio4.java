@@ -32,7 +32,7 @@ public class Exercicio4 {
            salario = salario * taxaAumento2;
         }
 
-        if(salario <= 3000) {
+        else if(salario <= 3000) {
             //salario *= taxaAumento1; } calculo escrito errado
          salario = salario * taxaAumento1;
         }
