@@ -11,13 +11,27 @@
         int n2;
 
         System.out.println("Digite dois números: ");
-        n1 = input.nextInt();
-        n2 = input.nextInt();
+    
+        while (true) {
+            n1 = input.nextInt();
+            if (n1 == 0) {
+                System.out.println("Zero dividido por qualquer número é zero.");
+                break; // Sai do loop se o p6rimeiro número for zero
+            }
 
-        double divisão = n1 / n2;
-        System.out.println("O resultado da divisão dos dois números é: " + divisão);
+            n2 = input.nextInt();
 
-
+            if (n2 != 0) {
+                double divisão = n1 / n2;
+                System.out.println("O resultado da divisão dos dois números é: " + divisão);
+                break;
+            } else {
+                System.out.println("Erro: Divisão por zero não é permitida.");
+                break;
+            }
+        }
+        System.out.println("Programa encerrado.");
         input.close();
+
     }
- }
+}
